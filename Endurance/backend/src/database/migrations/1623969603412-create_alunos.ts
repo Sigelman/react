@@ -1,55 +1,56 @@
-import {MigrationInterface, QueryRunner, Table, TableForeignKey} from "typeorm";
+import { MigrationInterface, QueryRunner, Table, TableForeignKey } from "typeorm";
 
-export class createAlunos1623962285518 implements MigrationInterface {
+export class createAlunos1623969603412 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(new Table({
-            name:'alunos',
-            columns:[
+            name: 'alunos',
+            columns: [
                 {
                     name: 'id',
                     type: 'int',
                     unsigned: true,
                     isPrimary: true,
-                    isGenerated:true,
-                    generationStrategy:'increment',
+                    isGenerated: true,
+                    generationStrategy: 'increment',
                 },
                 {
-                    name:'nome',
-                    type:'varchar',
+                    name: 'nome',
+                    type: 'varchar',
                 },
                 {
-                    name:'idade',
-                    type:'integer',
+                    name: 'idade',
+                    type: 'integer',
                 },
                 {
-                    name:'sexo',
-                    type:'varchar(1)',
+                    name: 'sexo',
+                    type: 'varchar(1)',
                 },
                 {
-                    name:'peso',
-                    type:'double',
+                    name: 'peso',
+                    type: 'double',
                 },
                 {
-                    name:'altura',
-                    type:'double',
+                    name: 'altura',
+                    type: 'double',
                 },
                 {
-                    name:'cintura',
-                    type:'double',
+                    name: 'cintura',
+                    type: 'double',
                 },
                 {
-                    name:'sessoes',
-                    type:'integer',
+                    name: 'sessoes',
+                    type: 'integer',
                 },
                 {
-                    name:'personal_id',
-                    type:'int',
+                    name: 'personal_id',
+                    type: 'int',
+                    unsigned: true,
                 }
 
             ],
-          }));
-          await queryRunner.createForeignKey("alunos", new TableForeignKey({
+        }));
+        await queryRunner.createForeignKey("alunos", new TableForeignKey({
             columnNames: ["personal_id"],
             referencedColumnNames: ["id"],
             referencedTableName: "personal",
