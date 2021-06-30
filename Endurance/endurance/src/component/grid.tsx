@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import styled from 'styled-components';
-import {isMobile, isTablet, isDesktop} from 'react-device-detect';
+//import {isMobile, isTablet, isDesktop} from 'react-device-detect';
 
 
 export const Container = styled.div `
@@ -46,17 +46,6 @@ export const Column = styled.div `
     min-height: 1px;
     box-sizing: border-box;
     width: 100%;
-    }
-    @media only screen and (min-width: 768px) {
-        ${({ mobile }) => (mobile && getWidthGrid(mobile))}
-
-    }
-    @media only screen and (min-width: 768px) {
-        ${({ tablet }) => tablet && getWidthGrid(tablet)}
-    }
-    @media only screen and (min-width: 1000px) {
-        ${({ desktop }) => desktop && getWidthGrid(desktop)}
-    }
     `;
 
 class App extends Component {
@@ -64,7 +53,10 @@ class App extends Component {
         return (
             <Container>
                 <Row>
-                    <Column mobile ='6' tablet='12' desktop ='6'>mobile 6/ tablet 12/desktop 6</Column>
+                    <Column>mobile 6/ tablet 12/desktop 6</Column>
+                    <Column>mobile 6/ tablet 12/desktop 6</Column>
+                    <Column>mobile 6/ tablet 12/desktop 6</Column>
+                    <Column>mobile 6/ tablet 12/desktop 6</Column>
                 </Row>
             </Container>
         )

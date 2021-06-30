@@ -66,84 +66,59 @@
 #page-treino main {
     flex: 1;
 }
-  
-form.create-treino-form {
-    width: 700px;
-    margin: 350px auto;
-  
-    background: #FFFFFF;
-    border: 1px solid #D3E2E5;
-    border-radius: 20px;
-  
-    padding: 64px 80px;
-  
-    overflow: hidden;
+
+#container {
+  width: min(90vw, 800px);
+  margin: 300px 40px 80px 15px;
 }
-form.create-treino-form .input-block + .input-block {
-    margin-top: 24px;
-  }
+
+#transaction {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+#data-table {
+  width: 100%;
+  border-spacing: 0 0.5rem;
+  color: #969cb3;
+}
+
+table thead tr th:first-child, 
+table tbody tr td:first-child
+{
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child, 
+table tbody tr td:last-child{
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table thead th {
+  background: white;
+
+  font-weight: normal;
+  padding: 1rem 2rem;
+
+  text-align: left;
+}
+
+table tbody tr {
+  opacity: 0.7
+}
+
+table tbody tr:hover {
+  opacity: 1
+}
+
+table tbody td {
+  background:white;
+  padding: 1rem 2rem;
+}
+
+
+
   
-  form.create-treino-form .input-block label {
-    display: flex;
-    color: #8FA7B3;
-    margin-bottom: 8px;
-    line-height: 24px;
-  }
-  
-  form.create-treino-form .input-block label span {
-    font-size: 14px;
-    color: #8FA7B3;
-    margin-left: 24px;
-    line-height: 24px;
-  }
-  
-  form.create-treino-form .input-block input,
-  form.create-treino-form .input-block textarea {
-    width: 100%;
-    background: #F5F8FA;
-    border: 1px solid #D3E2E5;
-    border-radius: 20px;
-    outline: none;
-    color: #5C8599;
-  }
-  
-  form.create-treino-form .input-block input {
-    height: 64px;
-    padding: 0 16px;
-  }
-  
-  form.create-treino-form .input-block textarea {
-    min-height: 120px;
-    max-height: 240px;
-    resize: vertical;
-    padding: 16px;
-    line-height: 28px;
-  }
-  
-  form.create-treino-form button.confirm-button {
-    margin-top: 64px;
-  
-    width: 105%;
-    height: 64px;
-    border: 0;
-    cursor: pointer;
-    background: #3CDC8C;
-    border-radius: 20px;
-    color: #FFFFFF;
-    font-weight: 800;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    transition: background-color 0.2s;
-  }
-  form.create-treino-form button.confirm-button svg {
-    margin-right: 16px;
-  }
-  
-  form.create-treino-form button.confirm-button:hover {
-    background: #36CF82;
-  }
-  
+
   
