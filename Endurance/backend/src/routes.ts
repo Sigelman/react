@@ -3,7 +3,7 @@ import BancosController from './controllers/BancosController';
 import LoginsController from './controllers/LoginController';
 import PersonalsController from './controllers/PersonalController';
 import AlunosController from './controllers/AlunoController';
-
+import TreinosController from './controllers/TreinoController';
 
 
 const routes = Router();
@@ -29,5 +29,10 @@ routes.post('/alunos', AlunosController.create);
 routes.put('/alunos/:id', AlunosController.update);
 routes.delete('/alunos/:id', AlunosController.destroy);
 
+routes.get('/treinos', TreinosController.index);
+routes.get('/treinos/:id', TreinosController.show);
+routes.post('/treinos', TreinosController.create);
+routes.put('/treinos/:id', TreinosController.update);
+routes.delete('/treinos/:id', TreinosController.destroy);
 
 export default routes;
