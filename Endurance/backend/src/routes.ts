@@ -1,4 +1,4 @@
-import {Router} from 'express';
+import { Router } from 'express';
 import BancosController from './controllers/BancosController';
 import LoginsController from './controllers/LoginController';
 import PersonalsController from './controllers/PersonalController';
@@ -12,6 +12,7 @@ routes.get('/bancos', BancosController.index);
 routes.get('/bancos/:id', BancosController.show);
 routes.post('/bancos', BancosController.create);
 routes.put('/bancos', BancosController.update);
+routes.delete('/bancos/:id', BancosController.destroy);
 
 routes.get('/logins', LoginsController.index);
 routes.get('/logins/:id', LoginsController.show);
@@ -22,6 +23,8 @@ routes.delete('/logins/:id', LoginsController.destroy);
 routes.get('/personals', PersonalsController.index);
 routes.get('/personals/:id', PersonalsController.show);
 routes.post('/personals', PersonalsController.create);
+routes.put('/personals/:id', PersonalsController.update);
+routes.delete('/personals/:id', PersonalsController.destroy);
 
 routes.get('/alunos', AlunosController.index);
 routes.get('/alunos/:id', AlunosController.show);
