@@ -27,5 +27,5 @@ export default class Treino {
     sessao:number;
 
     @Column()
-    id_aluno:number;
+    aluno_id:number;
 }

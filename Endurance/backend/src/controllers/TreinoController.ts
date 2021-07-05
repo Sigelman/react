@@ -15,7 +15,7 @@ export default {
             terreno,
             pseprevista,
             sessao,
-            id_aluno,
+            aluno_id,
 
         } = request.body;
     
@@ -28,15 +28,9 @@ export default {
             terreno,
             pseprevista,
             sessao,
-            id_aluno,
+            aluno_id,
         };
 
-        const schema = Yup.object().shape({
-        });
-
-        await schema.validate(data, {
-            abortEarly: false,
-        });
 
         const treino = treinosReposiroty.create(data);
     
@@ -44,7 +38,7 @@ export default {
     
         return response.status(201).json(treino);
               
-        },
+    },
 
      async index(request: Request, response: Response) {
        const  treinosRepository = getRepository(Treino);
@@ -71,7 +65,7 @@ export default {
             terreno,
             pseprevista,
             sessao,
-            id_aluno,
+            aluno_id,
             } = request.body;
     
         const treinosRepository = getRepository(Treino);
@@ -83,7 +77,7 @@ export default {
             terreno,
             pseprevista,
             sessao,
-            id_aluno,
+            aluno_id,
         };
 
         const schema = Yup.object().shape({
