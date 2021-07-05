@@ -140,7 +140,7 @@ function CadastrarTreino() {
                     <div className="input-block">
                       <label htmlFor="name">Sessão</label>
                       <select id="sessao" value={sessao} onChange={event =>setSessao(event.target.value)}>
-                        {options.map((option: { id: {} | null | undefined; })=>(
+                        {options.map((option)=>(
                            <option key={option.id} value={option.id}>Sessão{option.id}</option>
                         )
                         )}
