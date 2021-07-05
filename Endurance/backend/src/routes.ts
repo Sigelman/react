@@ -32,7 +32,6 @@ routes.post('/alunos', AlunosController.create);
 routes.put('/alunos/:id', AlunosController.update);
 routes.delete('/alunos/:id', AlunosController.destroy);
 
-
 routes.get('/treinos', TreinosController.index);
 routes.get('/treinos/:id', TreinosController.show);
 routes.post('/treinos', TreinosController.create);
