@@ -1,5 +1,6 @@
 import Treino from '../models/Treino';
 
+
 export default {
     render (treino: Treino) {
         return {
