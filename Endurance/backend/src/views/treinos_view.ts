@@ -11,7 +11,7 @@ export default {
             terreno:treino.terreno,
             pseprevista:treino.pseprevista,
             sessao:treino.sessao,
-            id_aluno:treino.id_aluno,
+            id_aluno:treino.aluno_id,
         };
     },
     renderMany(treinos: Treino[]) {
