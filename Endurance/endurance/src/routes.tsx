@@ -9,7 +9,7 @@ import Novasenha from './pages/novasenha';
 import Aluno from './pages/aluno';
 import Cadastraraluno from './pages/cadastrarAluno';
 import Treino from './pages/treino';
-
+import Cadastrartreino from './pages/cadastrarTreino';
 
 function Routes() {
     return (
@@ -23,7 +23,8 @@ function Routes() {
                 <Route path="/aluno" component={Aluno} />
                 <Route path="/cadastraraluno" component={Cadastraraluno} />
                 <Route path="/treino" component={Treino} />
-                
+                <Route path="/cadastrartreino" component={Cadastrartreino} />
+
             </Switch>
         </BrowserRouter>
     )

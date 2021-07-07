@@ -29,7 +29,7 @@ export default {
             pseprevista,
             sessao,
             aluno_id,
-        };
+        };        
 
 
         const treino = treinosReposiroty.create(data);
