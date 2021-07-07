@@ -24,6 +24,11 @@ export default {
             cadastro_id,
         };
 
+        const userAlreaadExist = await getRepository(Login).findOne({email});
+        if (userAlreaadExist) {
+            throw new Error('Email já cadastrado');
+        }
+
         const schema = Yup.object().shape({
             email: Yup.string().required("Email obrigatório"),
             senha: Yup.string().required("Senha obrigatória"),
@@ -79,10 +84,6 @@ export default {
             cadastro_id,
         };
 
-        const userAlreaadExist = await getRepository(Login).findOne({email});
-        if (userAlreaadExist) {
-            throw new Error('Email já cadastrado');
-        }
 
         const schema = Yup.object().shape({
             email: Yup.string().required("Email obrigatório"),
