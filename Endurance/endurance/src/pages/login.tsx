@@ -59,7 +59,7 @@ function Login() {
           } else 
           if (perfil === 'A') {
               {primeiro_acesso ? history.push({pathname:'/novasenha', search: '?id='+id, state: { detail: id }}):
-              history.push({pathname:'/aluno', search: '?id='+id, state: { detail: id }})};
+              history.push({pathname:'/aluno', search: '?id='+cadastro_id, state: { detail: id }})};
           };
 
       } else alert('usuário não encontrado');

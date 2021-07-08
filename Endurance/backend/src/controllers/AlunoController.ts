@@ -56,7 +56,7 @@ export default {
     async show(request: Request, response: Response) {
         const { id } = request.params;
         const alunosRepository = getRepository(Aluno);
-        const aluno = await alunosRepository.findOneOrFail(id,{ relations: ['alunos'] });
+        const aluno = await alunosRepository.findOneOrFail(id,{ relations: ['treinos'] });
         return response.json(alunoView.render(aluno));
     },
 

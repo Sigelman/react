@@ -10,6 +10,8 @@ import Aluno from './pages/aluno';
 import Cadastraraluno from './pages/cadastrarAluno';
 import Treino from './pages/treino';
 import Cadastrartreino from './pages/cadastrarTreino';
+import Executartreino from './pages/executarTreino';
+import Praticatreino from './pages/praticaTreino';
 
 function Routes() {
     return (
@@ -24,7 +26,8 @@ function Routes() {
                 <Route path="/cadastraraluno" component={Cadastraraluno} />
                 <Route path="/treino" component={Treino} />
                 <Route path="/cadastrartreino" component={Cadastrartreino} />
-
+                <Route path="/executartreino" component={Executartreino} />
+                <Route path="/praticatreino" component={Praticatreino} />
             </Switch>
         </BrowserRouter>
     )

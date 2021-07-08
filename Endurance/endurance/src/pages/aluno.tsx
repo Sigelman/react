@@ -40,10 +40,11 @@ function Personal() {
                                 Atualizar Cadastro
                         </button>
                     </Link>
-
-                    <button className="confirm-button" type="button">
-                            Executar Treino
-                    </button>
+                    <Link to={{pathname:"/executartreino", search: '?id='+queryParams.get('id'), state: { detail: queryParams.get('id') }}}>
+                        <button className="confirm-button" type="button">
+                                Executar Treino
+                        </button>
+                    </Link>
 
                 </form>
             </main>

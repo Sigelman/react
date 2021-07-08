@@ -2,10 +2,6 @@ import {useEffect, useState} from "react";
 import { useHistory} from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import {Link} from 'react-router-dom';
-//import ReactDataGrid, { Row } from 'react-data-grid';
-//import {Container, Row, Column} from '../component/grid';
-
-
 
 
 import loginImg from '../images/decatlo.png';
@@ -14,8 +10,6 @@ import rightArrow from '../images/circled-right.png'
 import api from '../services/api';
 
 import '../styles/pages/treino.css';
-//import { StringifyOptions } from "querystring";
-//import FlatButton from "material-ui/FlatButton";
 
 
 interface Aluno  {
@@ -47,8 +41,6 @@ interface Personal  {
 
 
 function Treino() {
-
-    //const params = useParams<PersonalParams>()
 
     const history = useHistory();
     const params = new URLSearchParams(history.location.search);
