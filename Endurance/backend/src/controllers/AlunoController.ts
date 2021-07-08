@@ -49,14 +49,14 @@ export default {
 
     async index(request: Request, response: Response) {
         const alunosRepository = getRepository(Aluno);
-        const alunos = await alunosRepository.find();
+        const alunos = await alunosRepository.find({ relations: ['treinos'] });
         return response.json(alunoView.renderMany(alunos));
     },
 
     async show(request: Request, response: Response) {
         const { id } = request.params;
         const alunosRepository = getRepository(Aluno);
-        const aluno = await alunosRepository.findOneOrFail(id);
+        const aluno = await alunosRepository.findOneOrFail(id,{ relations: ['alunos'] });
         return response.json(alunoView.render(aluno));
     },
 

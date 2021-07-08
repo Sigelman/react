@@ -1,4 +1,5 @@
-import {Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
+import {Entity, Column, PrimaryGeneratedColumn, ManyToOne, JoinColumn} from 'typeorm';
+import Aluno from './Aluno';
 
 @Entity('treinos')
 export default class Treino {
@@ -26,6 +27,8 @@ export default class Treino {
     @Column()
     sessao:number;
 
-    @Column()
-    aluno_id:number;
+    @ManyToOne( () => Aluno, aluno =>  aluno.treinos)
+    @JoinColumn({name: 'aluno_id'})
+    aluno: Aluno;
+
 }

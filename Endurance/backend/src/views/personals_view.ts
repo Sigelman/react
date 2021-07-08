@@ -1,4 +1,3 @@
-//import PersonalController from '../controllers/PersonalController';
 import Personal from '../models/Personal';
 import alunosView from './alunos_view';
 
