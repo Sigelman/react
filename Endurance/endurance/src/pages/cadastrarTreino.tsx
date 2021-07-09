@@ -56,7 +56,7 @@ function CadastrarTreino() {
 
       const cadastroTreino = {metodo,minutagem,distancia,zonaesforco,terreno,pseprevista,sessao,aluno_id};
       const response = await api.post('treinos/', cadastroTreino);
-      alert('cadastro realizado com suesso');
+      alert('cadastro realizado com sucesso');
        
   }; 
 

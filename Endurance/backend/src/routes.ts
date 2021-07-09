@@ -4,6 +4,7 @@ import LoginsController from './controllers/LoginController';
 import PersonalsController from './controllers/PersonalController';
 import AlunosController from './controllers/AlunoController';
 import TreinosController from './controllers/TreinoController';
+import TreinamentoController from './controllers/TreinamentoController';
 
 
 const routes = Router();
@@ -37,5 +38,11 @@ routes.get('/treinos/:id', TreinosController.show);
 routes.post('/treinos', TreinosController.create);
 routes.put('/treinos/:id', TreinosController.update);
 routes.delete('/treinos/:id', TreinosController.destroy);
+
+routes.get('/treinamentos', TreinamentoController.index);
+routes.get('/treinamentos/:id', TreinamentoController.show);
+routes.post('/treinamentos', TreinamentoController.create);
+routes.put('/treinamentos/:id', TreinamentoController.update);
+routes.delete('/treinamentos/:id', TreinamentoController.destroy);
 
 export default routes;

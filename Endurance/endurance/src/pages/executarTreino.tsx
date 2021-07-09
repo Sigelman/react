@@ -118,7 +118,7 @@ function ExecutarTreino() {
                             <td>{pse[row.pseprevista-1]}</td>
                             <td>{row.sessao}</td>
                             <td>
-                                <Link to={{pathname:"/praticatreino", search: '?id='+row.id+'&&aluno='+params.get('id')+'&&sessao='+row.sessao, state: { detail: row.id }}}>
+                                <Link to={{pathname:"/treinamento", search: '?id='+row.id+'&&aluno='+params.get('id')+'&&sessao='+row.sessao, state: { detail: row.id }}}>
                                     <img src={rightArrow}/>
                                 </Link>
                             </td>

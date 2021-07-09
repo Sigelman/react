@@ -19,7 +19,7 @@ export default {
 
         } = request.body;
     
-        const treinosReposiroty = getRepository(Treino);
+        const treinosRepository = getRepository(Treino);
         const data = {
             metodo,
             minutagem,
@@ -32,9 +32,9 @@ export default {
         };        
 
 
-        const treino = treinosReposiroty.create(data);
+        const treino = treinosRepository.create(data);
     
-        await treinosReposiroty.save(treino);
+        await treinosRepository.save(treino);
     
         return response.status(201).json(treino);
               
